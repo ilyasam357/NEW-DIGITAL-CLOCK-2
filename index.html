@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Courgette&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Courgette&family=Kdam+Thmor+Pro&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+        <title>NEW DIGITAL CLOCK-2</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="display">
+                <div id="time"></div>
+                <div id="quotes">
+                    <h1>Nasehat Singkat</h1>
+                </div>
+                <div class="animasi-text">
+                    <div class="line">
+                        <p>. "Jika kamu membuang uang, maka kamu akan kehilangan uang. Namun, jika kamu membuang waktu, maka kamu akan kehilangan bagian terbesar dalam hidupmu."</p>
+                    </div>
+                    <br />
+                    <div class="line">
+                        <p>"Yang paling berharga itu: kesehatan dan waktu. Jadi, jangan menyia-nyiakan waktu dan jagalah kesehatan dengan baik."</p>
+                    </div>
+                    <br />
+                    <!-- <div class="line">
+                        <p>"Orang rata-rata tidak mempedulikan waktu yang ada, sementara orang yang bijak menggunakan waktu dengan baik."</p>
+                    </div> -->
+                    <!-- <br />
+                    <div class="line">
+                        <p>"Satu-satunya hal yang tak bisa didaur ulang adalah waktu yang terbuang sia-sia."</p>
+                    </div> -->
+                </div>
+            </div>
+
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- <div class="wrapper2">
+            <div class="display2">
+                <div id="quotes">
+                    <h1></h1>
+                </div>
+            </div>
+            <span></span>
+            <span></span>
+        </div> -->
+
+        <script>
+            setInterval(() => {
+                const time = document.querySelector("#time");
+                let date = new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let day_night = "AM";
+
+                if (hours > 12) {
+                    day_night = "PM";
+                    // hours = hours - 12;
+                }
+
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
+            });
+        </script>
+    </body>
+</html>

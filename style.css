@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 
+@media screen and (max-width: 1000px) {
+    body {
+        height: 100%;
+    }
+} */
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: rgb(28, 29, 28);
+}
+
+.wrapper {
+    height: 306px;
+    width: 390px;
+    cursor: default;
+    background: linear-gradient(135deg, rgb(241, 32, 32), rgba(255, 255, 255, 0.919), rgb(69, 238, 53));
+    border-radius: 9px;
+    animation: animate 3s linear infinite;
+    /* margin-top: 102px; */
+}
+
+/* .wrapper2 {
+    height: 220px;
+    width: 560px;
+    cursor: default;
+    background: linear-gradient(135deg, rgb(28, 156, 3), rgba(55, 248, 6, 0.919), rgb(117, 240, 106));
+    border-radius: 9px;
+    animation: animate 3s linear infinite;
+    margin-bottom: 200px;
+} */
+
+.wrapper .display,
+.wrapper span {
+    position: absolute;
+    /* opacity: 0; */
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.wrapper .display {
+    z-index: 999;
+    background: rgb(12, 12, 12);
+    height: 100px;
+    width: 375px;
+    text-align: center;
+    padding-bottom: 193px;
+}
+
+.wrapper .display #time {
+    line-height: 84px;
+    font-size: 49px;
+    font-weight: 590;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, rgb(245, 63, 63), rgb(255, 255, 248), rgb(63, 233, 47));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.wrapper .display #quotes {
+    /* line-height: 84px; */
+    font-size: 19px;
+
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, rgb(245, 63, 63), rgb(255, 255, 248), rgb(63, 233, 47));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+.animasi-text {
+    margin-top: 63px;
+    color: rgb(14, 14, 14);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(12, 240, 4);
+    padding: 0 40px;
+    height: 149px;
+    width: 278px;
+    overflow: hidden;
+    font-family: "Oswald", sans-serif;
+}
+.line {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 23px;
+    line-height: 22px;
+}
+
+.line:first-child {
+    animation: anim 27s infinite;
+}
+
+/* @keyframes animasi-ketik {
+    from {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes animasi-ketik {
+    from {
+        width: 0;
+    }
+} */
+@keyframes anim {
+    10% {
+        margin-top: -50;
+    }
+    16% {
+        margin-top: -60px;
+    }
+    33% {
+        margin-top: -120px;
+    }
+    50% {
+        margin-top: -150px;
+    }
+    66% {
+        margin-top: -120px;
+    }
+    82% {
+        margin-top: -70px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(460deg);
+    }
+}
+
+.wrapper span {
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 10;
+}
+
+.wrapper span:first-child {
+    filter: blur(11px);
+}
+
+.wrapper span:last-child {
+    filter: blur(17px);
+}
